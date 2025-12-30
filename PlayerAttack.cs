@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.Drawing;
+using static System.Windows.Forms.Control;
 
 namespace Programming_Coursework_2
 {
@@ -8,8 +9,7 @@ namespace Programming_Coursework_2
         private const int ATTACK_RANGE = 50;
         private const int ATTACK_HEIGHT = 60;
 
-        /// <p name="playerBox"
-        /// <p name="formControls"
+
         public static void PerformAttack(PictureBox playerBox, ControlCollection formControls)
         {
             Rectangle attackBounds = new Rectangle(
@@ -36,4 +36,4 @@ namespace Programming_Coursework_2
             enemy.Visible = false; // kill
         }
     }
-}
+} 

@@ -10,7 +10,7 @@ namespace Programming_Coursework_2
         public bool GoRight { get; set; }
         public bool Jumping { get; set; }
         public bool HasKey { get; set; }
-        public int Score { get; set; }
+        public int Score { get; set; }  
 
         private int jumpSpeed = 10;
         private int force = 8;

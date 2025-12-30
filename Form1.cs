@@ -9,10 +9,20 @@ namespace Programming_Coursework_2
         private int backgroundSpeed = 8;
         public bool isAirborne;
 
+        Enemy enemy;
+
         public Form1()
         {
             InitializeComponent();
             gamePlayer = new Player(this.player);
+            {
+                InitializeComponent();
+                enemy = new Enemy(this);
+            }
+        }
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            enemy.MoveLeft();
         }
 
         private void MainTimerEvent(object sender, EventArgs e)
@@ -72,7 +82,7 @@ namespace Programming_Coursework_2
                 RestartGame();
             }
         }
-        
+
         private bool isAttacking = false;
 
         private void KeyIsDown(object sender, KeyEventArgs e)
@@ -96,8 +106,8 @@ namespace Programming_Coursework_2
         {
             if (e.KeyCode == Keys.Left) gamePlayer.GoLeft = false;
             if (e.KeyCode == Keys.Right) gamePlayer.GoRight = false;
-            if (e.KeyCode == Keys.Space && gamePlayer.Jumping == true);
-            
+            if (e.KeyCode == Keys.Space && gamePlayer.Jumping == true) ;
+
         }
 
         private void CloseGame(object sender, FormClosedEventArgs e)
@@ -129,5 +139,6 @@ namespace Programming_Coursework_2
                 }
             }
         }
+
     }
-}
+} 
