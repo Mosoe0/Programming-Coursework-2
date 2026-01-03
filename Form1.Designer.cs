@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             background = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -61,6 +62,7 @@
             txtscore = new Label();
             GameTimer = new System.Windows.Forms.Timer(components);
             pictureBox1 = new PictureBox();
+            pictureBox15 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)background).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -90,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             SuspendLayout();
             // 
             // background
@@ -427,11 +430,22 @@
             pictureBox1.TabStop = false;
             pictureBox1.Tag = "Platform";
             // 
+            // pictureBox15
+            // 
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(243, 375);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(100, 50);
+            pictureBox15.TabIndex = 30;
+            pictureBox15.TabStop = false;
+            pictureBox15.Tag = "enemy1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(598, 481);
+            Controls.Add(pictureBox15);
             Controls.Add(pictureBox1);
             Controls.Add(txtscore);
             Controls.Add(pictureBox28);
@@ -497,6 +511,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -535,5 +550,6 @@
         private Label txtscore;
         private System.Windows.Forms.Timer GameTimer;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox15;
     }
 }
