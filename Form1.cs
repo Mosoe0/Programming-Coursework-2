@@ -18,6 +18,8 @@ namespace Programming_Coursework_2
             {
                 InitializeComponent();
                 enemy = new Enemy(this);
+                player = new Player(this, playerHealthBar);
+                enemy = new Enemy(this);
             }
         }
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -140,5 +142,6 @@ namespace Programming_Coursework_2
             }
         }
 
+   
     }
 } 

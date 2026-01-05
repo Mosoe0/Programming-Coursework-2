@@ -63,6 +63,7 @@
             GameTimer = new System.Windows.Forms.Timer(components);
             pictureBox1 = new PictureBox();
             pictureBox15 = new PictureBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)background).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -440,11 +441,23 @@
             pictureBox15.TabStop = false;
             pictureBox15.Tag = "enemy1";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(269, 24);
+            label1.Name = "lblHP";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 31;
+            label1.Text = "Hp: 100/100";
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(598, 481);
+            Controls.Add(label1);
             Controls.Add(pictureBox15);
             Controls.Add(pictureBox1);
             Controls.Add(txtscore);
@@ -551,5 +564,6 @@
         private System.Windows.Forms.Timer GameTimer;
         private PictureBox pictureBox1;
         private PictureBox pictureBox15;
+        private Label label1;
     }
 }
